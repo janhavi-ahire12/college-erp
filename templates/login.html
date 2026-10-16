@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>College ERP | Login</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body class="login-page"><main class="login-card"><div class="brand"><span class="brand-mark">C</span> College ERP</div><p class="eyebrow">STUDENT PORTAL</p><h1>Welcome back</h1><p class="muted">Sign in to view your college information.</p>
+{% with messages = get_flashed_messages() %}{% if messages %}<div class="alert">{{ messages[0] }}</div>{% endif %}{% endwith %}
+<form method="post"><label>Username</label><input name="username" placeholder="Enter username" required><label>Password</label><input type="password" name="password" placeholder="Enter password" required><button class="primary" type="submit">Sign in</button></form>
+<div class="demo"><b>Demo login</b><br>Username: <code>student</code><br>Password: <code>student123</code></div></main></body></html>
